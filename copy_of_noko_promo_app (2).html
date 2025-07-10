@@ -23,13 +23,18 @@
       z-index: 1;
     }
 
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
     nav {
       display: flex;
       gap: 1.5rem;
-      align-items: center;
-      margin-left: auto;
-      margin-right: 1rem;
-      margin-top: 3.7rem;
+      align-items: flex-end;
+      margin-top: 2.5rem;
+      margin-left: 2rem;
     }
 
     nav a {
@@ -61,8 +66,6 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-left: auto;
-      cursor: pointer;
       font-size: 1rem;
       transition: all 0.3s ease;
       border: none;
@@ -86,7 +89,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      margin: -1.55rem 2rem 2rem 2rem;
+      margin: -1rem 2rem 2rem 2rem;
       border-radius: 20px;
       position: relative;
       z-index: 1;
@@ -155,17 +158,29 @@
     }
 
     .hero-images img {
-      width: 45%;
-      border-radius: 10px;
       object-fit: cover;
+      border-radius: 12px;
     }
 
-    .hero-images img:first-child {
+    .hero-images img:nth-child(1) {
       width: 100%;
       max-height: 300px;
-      border-radius: 15px;
-      object-fit: cover;
-      margin-bottom: 1rem;
+      opacity: 0.9;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    .hero-images img:nth-child(2) {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-position: center top;
+    }
+
+    .hero-images img:nth-child(3),
+    .hero-images img:nth-child(4) {
+      width: 45%;
+      height: auto;
     }
 
     @media (max-width: 800px) {
@@ -180,14 +195,6 @@
 
       .hero-images {
         margin-top: 2rem;
-      }
-
-      .hero-images img {
-        width: 40%;
-      }
-
-      .hero-images img:first-child {
-        width: 100%;
       }
     }
 
@@ -207,7 +214,6 @@
       border-radius: 50%;
     }
 
-    /* Overlay for background blur & darken */
     #overlay {
       position: fixed;
       top: 0;
@@ -244,14 +250,18 @@
 <body>
 
 <header>
-  <img src="https://i.postimg.cc/NMhk08fw/charitywater-logo-horizontal-White-Text.png" alt="Charity: Water Logo" style="height: 40px;">
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About us</a>
-    <a href="#">What do we do?</a>
-  </nav>
-  <button type="button" class="donate-btn">Donate Here →</button>
-</header>
+  <div class="left-header">
+    <img src="https://i.postimg.cc/NMhk08fw/charitywater-logo-horizontal-White-Text.png" alt="Charity: Water Logo" style="height: 40px;">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">What do we do?</a>
+    </nav>
+  </div>
+  <button type="button" class="donate-btn" style="margin-top: 1.5rem; align-self: flex-start;">Donate Here →</button>
+  </header>
+
+
 
 <section class="hero">
   <div class="hero-text">
@@ -265,11 +275,11 @@
     <button class="learn-more-btn">Learn More →</button>
   </div>
   <div class="hero-images">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/1b90606fe869585aa4a73fef2d582743544c85398f725fd9457aacb60006aa32/0207_Ethiopia_2019_CG-.jpg?Expires=1751787577&Signature=B22r35mXQYmTLJitqs~qw1g0QO7Fyu0QdYcScFfSSd90MDdmc9eUCpU4owHHkwYTwH1zabwkFgNoI25CV7r8rzV0ugccLGCV2U9lk6vvZ0kX0toSPkcIzkv5aiJYo2xrWJx3LOdThfiFqunq7WrVr7NEKF5GOAcDGXh8zsSaUK2afSRCuTEzBH2Na9ZhodmjIqo3hEPg3DTB01ROvjG-VmywlReufIzB-qUnQdxDVoYDHFrRw-kXmOjCr-A-I3AUhNUal5Jvc52J3UJS9aEaknc0wEgT4FH0EXCUh5d9rlKDdrJ3Tr-mk4gUDu5NzTgb~UwqcvSPHukSQ-zx83iwoQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 1">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/40ba41fc45e5e377672c3ed45d1f0b554df90beb280d7c7278bb8013ce08bee4/4800_Ethiopia_2019_CG-.jpg?Expires=1751787739&Signature=IDfQDTOGnriET6MmoCbUgICb~K02YbRUBGcwWJbenr9HarnFubN46B9Svg3yiUFOVvGl23-g4SKjRsn03jvLemSv5qk8CgT52bSvCfAyUrC40yl8BRqvV6HmOLBEt3DHCmS0GeFXL5YgyYulMFZPjIihXMMIwFOs7MeOPfjzRUSUl7-MyI6FAWq0Fgpc2qDExfDxOF~iTGJLesxfSLd-7fVmRQqn63MBiR9m4MvmL4lzZiH5jXdPDSal1BwfL4VYXc3Odr4mOpIls0J6MRUDtSWOQexe0ttT-5jpTy9sfiBQoo5FAq4TUokVnEXntSlAftM5lJG41t8QbD6jgZzH~w__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 2">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/a0ee6da6d6c0b14400f8c80618aebb6265ff6908bd0562e881adcb5420af230e/charity_water_Tanzania_TaraShupePhotography_0074.jpg?Expires=1751787855&Signature=F-2QCOQgq65tLrPHq~4FjPyZ45i5DovpoTxek6UGJd74s2BsJxARy6LGF0PJJtLYbCHLkpC3S9AuZiNTV5z75LYMG3PNVL3-SjgAqIB14YM577iMxkX8GLZrYRm7GUy415eUJ2cDVD1nK3qbW6wTzBmRA4ewdRmBkCKkHie6BtjPrUE4vhwciyqV0JeZFE-EW-dDC6mSj-7bhAWg7WDuydQtIS5G0-q7WWUKBazbwUejgEIjYWqFdZQSBdD2-3x2AuI08uWoAUp89XY4StkCHoDU~ivTc5e6Z1Gux-Xy4psppT2pgzN-r5~F9u6sz1oeWoHS~As7l9c~Dyj0JHSS8g__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 3">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/3554db57df40eeeb07505e24f5ab8ffbbc44ff9ff4129559b4c08fe789785ffd/9927_Ethiopia_2019_CG-.jpg?Expires=1751787794&Signature=ZNi3ifcbTs0ftPnfKuBRGT3J4DtvA2Eg9gVEnUhQI~4JtrMMeGq1gAR~rAtofTu6K6MQxCPt4MsvZxh~xz-AU27m6jydoXCrqZCuzf7Vh-FHaV8mupi5t-SkpMi4VE3epe5pL6xcoj5Jt2ehUdey7qmA-AFsJ8-nCZSvumfZUlMjSk8agm1-EP-VgBnqYjtalZujHxbnT6A3lS6mVOaJBPOFt0yNJibCcDH-xVQkzP6Jx8e4ssqPmcTPYiUEX~-3OVrC705yf6Gz51VtYFPQZCSpdsBBtVR99FQNDhxQMDzJzaZ2WB6R4wVUA0knMGaZZ12ptutAwRZfet203r9C0A__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 4">
-  </div>
+  <img src="https://cdn2.dropmarkusercontent.com/52043/1b90606fe869585aa4a73fef2d582743544c85398f725fd9457aacb60006aa32/0207_Ethiopia_2019_CG-.jpg?Expires=1751787577&Signature=B22r35mXQYmTLJitqs~qw1g0QO7Fyu0QdYcScFfSSd90MDdmc9eUCpU4owHHkwYTwH1zabwkFgNoI25CV7r8rzV0ugccLGCV2U9lk6vvZ0kX0toSPkcIzkv5aiJYo2xrWJx3LOdThfiFqunq7WrVr7NEKF5GOAcDGXh8zsSaUK2afSRCuTEzBH2Na9ZhodmjIqo3hEPg3DTB01ROvjG-VmywlReufIzB-qUnQdxDVoYDHFrRw-kXmOjCr-A-I3AUhNUal5Jvc52J3UJS9aEaknc0wEgT4FH0EXCUh5d9rlKDdrJ3Tr-mk4gUDu5NzTgb~UwqcvSPHukSQ-zx83iwoQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 1">
+  <img src="https://cdn2.dropmarkusercontent.com/52043/40ba41fc45e5e377672c3ed45d1f0b554df90beb280d7c7278bb8013ce08bee4/4800_Ethiopia_2019_CG-.jpg?Expires=1751787739&Signature=IDfQDTOGnriET6MmoCbUgICb~K02YbRUBGcwWJbenr9HarnFubN46B9Svg3yiUFOVvGl23-g4SKjRsn03jvLemSv5qk8CgT52bSvCfAyUrC40yl8BRqvV6HmOLBEt3DHCmS0GeFXL5YgyYulMFZPjIihXMMIwFOs7MeOPfjzRUSUl7-MyI6FAWq0Fgpc2qDExfDxOF~iTGJLesxfSLd-7fVmRQqn63MBiR9m4MvmL4lzZiH5jXdPDSal1BwfL4VYXc3Odr4mOpIls0J6MRUDtSWOQexe0ttT-5jpTy9sfiBQoo5FAq4TUokVnEXntSlAftM5lJG41t8QbD6jgZzH~w__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 2">
+  <img src="https://cdn2.dropmarkusercontent.com/52043/a0ee6da6d6c0b14400f8c80618aebb6265ff6908bd0562e881adcb5420af230e/charity_water_Tanzania_TaraShupePhotography_0074.jpg?Expires=1751787855&Signature=F-2QCOQgq65tLrPHq~4FjPyZ45i5DovpoTxek6UGJd74s2BsJxARy6LGF0PJJtLYbCHLkpC3S9AuZiNTV5z75LYMG3PNVL3-SjgAqIB14YM577iMxkX8GLZrYRm7GUy415eUJ2cDVD1nK3qbW6wTzBmRA4ewdRmBkCKkHie6BtjPrUE4vhwciyqV0JeZFE-EW-dDC6mSj-7bhAWg7WDuydQtIS5G0-q7WWUKBazbwUejgEIjYWqFdZQSBdD2-3x2AuI08uWoAUp89XY4StkCHoDU~ivTc5e6Z1Gux-Xy4psppT2pgzN-r5~F9u6sz1oeWoHS~As7l9c~Dyj0JHSS8g__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 3">
+  <img src="https://cdn2.dropmarkusercontent.com/52043/3554db57df40eeeb07505e24f5ab8ffbbc44ff9ff4129559b4c08fe789785ffd/9927_Ethiopia_2019_CG-.jpg?Expires=1751787794&Signature=ZNi3ifcbTs0ftPnfKuBRGT3J4DtvA2Eg9gVEnUhQI~4JtrMMeGq1gAR~rAtofTu6K6MQxCPt4MsvZxh~xz-AU27m6jydoXCrqZCuzf7Vh-FHaV8mupi5t-SkpMi4VE3epe5pL6xcoj5Jt2ehUdey7qmA-AFsJ8-nCZSvumfZUlMjSk8agm1-EP-VgBnqYjtalZujHxbnT6A3lS6mVOaJBPOFt0yNJibCcDH-xVQkzP6Jx8e4ssqPmcTPYiUEX~-3OVrC705yf6Gz51VtYFPQZCSpdsBBtVR99FQNDhxQMDzJzaZ2WB6R4wVUA0knMGaZZ12ptutAwRZfet203r9C0A__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 4">
+</div>
 </section>
 
 <div id="overlay"></div>
