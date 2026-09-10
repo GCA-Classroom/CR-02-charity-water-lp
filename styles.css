@@ -25,11 +25,25 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  background-color: #FF902A; /* Charity: water orange */
+  background-image: url('img/child.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Proxima Nova', sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
+}
+
+/* Position the water can in the top-left corner */
+.water-can {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 80px;
+  z-index: 10;
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
@@ -45,7 +59,7 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: none;
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
@@ -57,13 +71,15 @@ section {
   /* Add a dark overlay for better text readability */
   /* This uses a simple linear-gradient overlay */
   background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+  background-color: transparent;
 }
 
 /* Make the headline bold and modern */
 .hero h1 {
   font-size: 2.5em;
   font-weight: bold;
+  color: #FFC907;
+  text-align: left;
   letter-spacing: 1px;
   margin-bottom: 15px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
@@ -72,16 +88,84 @@ section {
 /* Style the subheadline */
 .hero p {
   font-size: 1.2em;
+  color: #FF902A;
+  text-align: left;
   margin-top: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
 /* Story Section Styles */
 .story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
+  background-color: transparent;
   color: #222;
-  text-align: center;
+  text-align: left;
   padding: 30px 20px;
+}
+
+/* Style the story section buttons */
+.story-button {
+  display: inline-block;
+  background-color: #FF902A;
+  color: #fff;
+  padding: 14px 32px;
+  margin: 0 20px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.our-story-button {
+  background-color: #FF902A;
+  background-image: none;
+}
+
+.impact-story {
+  background-color: #FFC907;
+}
+
+.impact-story h2 {
+  color: #2E9DF7;
+}
+
+.impact-story p {
+  color: #2E9DF7;
+  font-weight: bold;
+}
+
+.donation-tracking {
+  background-color: transparent;
+  color: #FF902A;
+  text-align: left;
+}
+
+.tracking-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+}
+
+.donation-tracking h2,
+.donation-tracking p {
+  color: #2E9DF7;
+}
+
+.community-list {
+  color: #2E9DF7;
+  font-weight: bold;
+  text-align: left;
+  list-style: none;
+  padding-left: 0;
+}
+
+.tracking-button {
+  display: inline-block;
+  background-color: #FF902A;
+  color: #fff;
+  padding: 14px 32px;
+  margin-top: 12px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 /* Add accent color to section headings */
@@ -111,7 +195,7 @@ h2 {
 /* Donate Button Styles */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
+  background-color: #FF902A; /* Orange */
   color: #fff;
   padding: 14px 32px;
   text-decoration: none;
