@@ -3,45 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <title>Charity: Water - Clean Water For All</title>
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to Proxima Nova font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Header: This section contains logo, menu links, and login buttons -->
+    <header class="navbar">
+        <!-- Left side: Navigation menu and account buttons -->
+        <div class="navbar-left">
+            <!-- Navigation links: About Us, Take Action, Stories -->
+            <nav class="nav-menu">
+                <a href="https://www.charitywater.org/" class="nav-link" target="_blank">About Us</a>
+                <a href="https://www.charitywater.org/" class="nav-link" target="_blank">Take Action</a>
+                <a href="https://www.charitywater.org/" class="nav-link" target="_blank">Stories</a>
+            </nav>
+
+            <!-- Account buttons: Log In and Sign Up -->
+            <div class="auth-buttons">
+                <a href="#login" class="btn-login">Log In</a>
+                <a href="#signup" class="btn-signup">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Right side: Logo -->
+        <div class="navbar-right">
+            <!-- Charity: Water logo with jerry can -->
+            <img src="img/cw_logo.png" alt="Charity Water Logo" class="logo">
+        </div>
+    </header>
+
     <!-- Hero Section: This is the main banner at the top of the page -->
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
+        <!-- Main headline with impact message -->
+        <h1 class="headline">Clean Water For All: Every Dollar Creates Lasting Change</h1>
+        
+        <!-- Subheadline with statistics and mission -->
+        <p class="subheadline">
+            With over 696 million people lacking access to clean water, Charity: Water has helped over 21.6 million people through more than 209,241 water projects worldwide. Every dollar you give funds real, life-changing solutions directly, bringing safe drinking water to those who need it the most.
+        </p>
+
+        <!-- Call-to-action button in the hero section -->
+        <a href="#donate" class="cta-button">Start Your Journey Today</a>
     </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <h2>Our Mission</h2>
         <p>
-         
+            Charity: water is dedicated to bringing clean, safe drinking water and sanitation to communities across Africa, South Asia, and South America. We believe that access to clean water is the foundation for better health, greater opportunity, and long‑term prosperity. By investing in sustainable water solutions, we help families build stronger futures and unlock the potential of entire communities.
+        </p>
     </section>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
+    <!-- Take Action Section -->
+    <section class="action" id="action">
+        <h2>Take Action</h2>
+        <p>
+            Your support creates real, lasting change. Every donation, every volunteer effort, and every share of our mission helps bring clean, safe water to communities that need it most. Together with thousands of supporters around the world, you're helping families gain health, opportunity, and hope — one drop at a time.
+        </p>
+        <a href="#" class="action-button">Get Involved</a>
+    </section>
+
+    <!-- Stories Section: Real-world impact stories -->
+    <section class="stories" id="stories">
+        <h2>Stories of Change</h2>
+        
+        <!-- Helen's Story -->
+        <a href="https://www.charitywater.org/stories/what-helen-taught-us" class="story-card" target="_blank">
+            <img src="https://images.ctfassets.net/2w85ks0ylymt/1JkdLC6ENeRllFtltCOlbx/8b02cf5e03690007dd23b2c5eb73ad12/1_QlTXFea_C-fGM_5y2ZGqQA.jpeg" alt="Helen's Story" class="story-image">
+            <h3>Helen's Story</h3>
             <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
+                Helen used to spend hours each day walking long distances just to collect a small amount of water for her family. Clean water was scarce, and every day meant choosing between cooking, washing, or drinking. After her community gained access to clean water, everything changed — her children could attend school, she had time to work and care for her home, and her family's health and opportunities grew. Today, Helen runs small businesses, farms, and supports her grandchildren, all made possible by reliable access to clean water.
             </p>
-        </div>
+        </a>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Charity: Water. All rights reserved. Bringing clean water and sanitation to the world.</p>
+    </footer>
 </body>
 </html>
