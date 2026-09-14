@@ -196,3 +196,241 @@ section {
     width: 300px;
   }
 }
+/* Core Layout & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  color: #1a1a1a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #ffffff;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* Hero Section */
+.hero {
+  background: #f7f9fa;
+  padding: 4rem 1.25rem;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+/* Call to Action */
+.cta {
+  display: inline-block;
+  background-color: #f9c80e;
+  color: #000000;
+  padding: 0.875rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background-color: #e2b50b;
+  transform: translateY(-2px);
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* STORY SECTION */
+.story {
+  background: #ffffff;
+  padding: 3rem 1.25rem;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.story-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.story h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.story p {
+  font-size: 1.1rem;
+  color: #444444;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Gallery Layout */
+.images-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.images-gallery img {
+  width: 50%;
+  max-width: 450px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .images-gallery {
+    flex-direction: column;
+  }
+
+  .images-gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-top: 1px solid #eaeaea;
+  font-size: 0.9rem;
+  color: #666;
+}
+/* BRAND COLORS */
+:root {
+  --yellow: #FFC907;
+  --light-blue: #77A8BB;
+  --light-cream: #FFF7E1;
+  --peach: #FEDBC1;
+  --brown: #BF6C46;
+}
+
+/* Base */
+body {
+  background-color: var(--light-cream);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  color: #1a1a1a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #ffffff;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* Hero */
+.hero {
+  background: var(--light-blue);
+  padding: 4rem 1.25rem;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  background-color: var(--yellow);
+  color: #000000;
+  padding: 0.875rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #e2b50b;
+  transform: translateY(-2px);
+}
+
+/* Story */
+.story {
+  background: var(--peach);
+  padding: 3rem 1.25rem;
+}
+
+.story-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Gallery */
+.images-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.images-gallery img {
+  width: 50%;
+  max-width: 450px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background: var(--brown);
+  padding: 1.5rem;
+  color: var(--light-cream);
+  font-size: 0.9rem;
+}
