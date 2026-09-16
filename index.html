@@ -3,45 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <meta name="description" content="Join college students taking action for clean water with charity: water.">
+    <title>Make Your Move | charity: water</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+    <!-- The announcement bar gives visitors one quick reason to act today. -->
+    <div class="announcement">Campus Water Week is live <span aria-hidden="true">&#8594;</span> <a href="#join">Get involved</a></div>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+    <header class="site-header">
+        <a class="logo-link" href="#top" aria-label="charity: water home">
+            <img src="img/cw_logo-2.png" alt="charity: water">
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="#why-water">Why water</a>
+            <a href="#impact">Our impact</a>
+            <a href="#join">Take action</a>
+        </nav>
+        <a class="button button-small button-dark" href="#join">Join the movement <span aria-hidden="true">&#8594;</span></a>
+    </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+    <main id="top">
+        <!-- Hero: the main promise and the first action for a student visitor. -->
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">A student-powered water movement</p>
+                <h1>Change the world.<br><span>Start with water.</span></h1>
+                <p class="hero-text">You have the ideas, the energy, and the people. Put them toward a future where every person has access to clean water.</p>
+                <div class="hero-actions">
+                    <a class="button button-yellow" href="#join">Start a campus campaign <span aria-hidden="true">&#8594;</span></a>
+                    <a class="text-link" href="#why-water">See why it matters <span aria-hidden="true">&#8595;</span></a>
+                </div>
+                <div class="hero-note"><span class="note-dot"></span> 100% of public donations fund clean water projects</div>
+            </div>
+            <div class="hero-photo" role="img" aria-label="Students smiling outside near a water project">
+                <div class="photo-label"><strong>Water is a</strong><br>human right.</div>
+            </div>
+        </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+        <section class="ticker" aria-label="Impact statistics">
+            <div><strong>771M</strong><span>people lack clean water</span></div>
+            <div><strong>12 hrs</strong><span>saved each week for girls</span></div>
+            <div><strong>100%</strong><span>of public donations to water</span></div>
+        </section>
+
+        <!-- This section explains the problem in a short, easy-to-scan way. -->
+        <section class="why-water" id="why-water">
+            <div class="section-heading">
+                <p class="eyebrow">The ripple effect</p>
+                <h2>Clean water changes<br><em>everything.</em></h2>
+            </div>
+            <div class="why-copy">
+                <p>Water is more than a basic need. It is the beginning of better health, more time in school, and more freedom to build a future.</p>
+                <a class="arrow-link" href="#impact">Explore the impact <span aria-hidden="true">&#8594;</span></a>
+            </div>
+        </section>
+
+        <section class="impact" id="impact">
+            <div class="impact-image">
+                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1100&q=85" alt="A child smiling while holding a yellow water container">
+                <span class="image-tag">Meet Amina, Ethiopia</span>
+            </div>
+            <div class="impact-story">
+                <p class="eyebrow">One well. A whole new day.</p>
+                <h2>“Now I can be a student, not just a water carrier.”</h2>
+                <p>Amina used to spend hours walking for water before school. When her community got a clean water well, she got her time back. Her story is one of millions that starts with one simple investment.</p>
+                <a class="arrow-link" href="#join">Help create the next story <span aria-hidden="true">&#8594;</span></a>
+            </div>
+        </section>
+
+        <!-- The form gives students a low-barrier way to stay connected. -->
+        <section class="join" id="join">
+            <div class="join-copy">
+                <img class="water-can" src="img/water-can-transparent.png" alt="Yellow water can icon">
+                <div>
+                    <p class="eyebrow">Your next move</p>
+                    <h2>Make clean water<br>your campus cause.</h2>
+                    <p>Get the toolkit, bring your people together, and turn your campus into part of the solution.</p>
+                </div>
+            </div>
+            <form class="signup-form" action="#signup-success">
+                <label for="email">Get the student action kit</label>
+                <div class="form-row">
+                    <input id="email" name="email" type="email" placeholder="Your college email" required>
+                    <button class="button button-dark" type="submit">Send it <span aria-hidden="true">&#8594;</span></button>
+                </div>
+                <p class="form-note">No spam. Just ideas for making an impact.</p>
+                <p class="success-message" id="signup-success" role="status">You are in. Check your inbox for the action kit.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo-link" href="#top" aria-label="charity: water home"><img src="img/cw_logo-2.png" alt="charity: water"></a>
+        <p>Join the generation ending the water crisis.</p>
+        <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
+    </footer>
 </body>
 </html>
