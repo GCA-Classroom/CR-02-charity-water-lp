@@ -1,195 +1,452 @@
-/* charity: water Brand Colors & Fonts
+:root {
+  --yellow: #ffc907;
+  --blue: #2e9df7;
+  --ink: #111820;
+  --paper: #fffdf8;
+  --orange: #c75a00;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+/* Simple base styles for the whole page. */
+* {
+  box-sizing: border-box;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  background-color: #f4f8fb;
+  color: var(--ink);
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  color: #222;
+  min-width: 320px;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
-}
-
-/* Hero Section Styles */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .08)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 36px 7vw 64px;
+  position: relative;
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+.hero::after {
+  background: rgba(255, 255, 255, .12);
+  border-radius: 50%;
+  content: '';
+  height: 500px;
+  position: absolute;
+  right: 25%;
+  top: -240px;
+  width: 500px;
 }
 
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+.site-header,
+.hero-content {
+  margin: 0 auto;
+  max-width: 1240px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
-}
-
-/* Donate Button Styles */
-.donate-button {
+.brand {
+  background: rgba(255, 255, 255, .8);
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
+  padding: 12px 18px;
+}
+
+.brand img {
+  display: block;
+  max-width: 220px;
+  width: 42vw;
+}
+
+.hero-content {
+  align-items: center;
+  display: flex;
+  gap: 7vw;
+  justify-content: space-between;
+  padding-top: 76px;
+}
+
+.message {
+  max-width: 600px;
+}
+
+.eyebrow {
+  font-size: .9rem;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
+  letter-spacing: 2px;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.message h1 {
+  font-size: clamp(3.2rem, 7vw, 6.3rem);
+  letter-spacing: -2px;
+  line-height: .92;
+  margin: 0;
+}
+
+.message h1 span {
+  color: #075e96;
+}
+
+.intro {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.35;
+  margin: 28px 0 44px;
+  max-width: 480px;
+}
+
+.reason {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  margin: 18px 0;
+}
+
+.reason-icon {
+  align-items: center;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.7rem;
+  height: 52px;
+  justify-content: center;
+  width: 52px;
+}
+
+.reason p {
+  line-height: 1.35;
+  margin: 0;
+}
+
+.reason small {
+  font-size: .9rem;
+}
+
+.impact-stats {
+  background: rgba(255, 253, 248, .86);
+  border-left: 6px solid var(--yellow);
+  border-radius: 10px;
+  display: flex;
+  gap: 28px;
+  margin-top: 40px;
+  padding: 20px 22px;
+  position: relative;
+}
+
+.stats-label {
+  color: var(--orange);
+  font-size: .72rem;
+  font-weight: bold;
+  left: 22px;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 7px;
+}
+
+.stat {
+  flex: 1;
+  padding-top: 10px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.stat span {
+  display: block;
+  font-size: .75rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-top: 7px;
+}
+
+.donation-card {
+  background: var(--paper);
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(122, 69, 15, .2);
+  max-width: 520px;
+  padding: 46px;
+  width: 100%;
+}
+
+.donation-card h2 {
+  font-size: 2.2rem;
+  margin: 0 0 8px;
+}
+
+.form-intro {
+  margin: 0 0 28px;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: .9rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.amount-options {
+  display: flex;
+  gap: 10px;
+}
+
+.amount-button,
+input,
+textarea {
+  background: #f1f2f3;
+  border: 2px solid transparent;
+  border-radius: 7px;
+  color: var(--ink);
+  font: inherit;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.amount-button {
   cursor: pointer;
+  flex: 1;
+  transition: background .2s, transform .2s;
 }
 
-/* Change button color when hovered */
+.amount-button:hover,
+.amount-button.selected {
+  background: var(--yellow);
+  transform: translateY(-2px);
+}
+
+.details {
+  margin-top: 40px;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--blue);
+  outline: 0;
+}
+
+.donate-button {
+  background: var(--orange);
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-top: 26px;
+  padding: 18px;
+  transition: background .2s, transform .2s;
+  width: 100%;
+}
+
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+  background: #a64500;
+  transform: translateY(-2px);
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
+.thank-you {
+  margin: 24px 0 0;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
+.generosity {
+  font-weight: bold;
+  margin-bottom: 0;
+}
 
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
+.generosity span {
+  color: #31c9e2;
+  font-size: 1.3rem;
+}
+
+.submitted .thank-you {
+  color: #087c4a;
+  font-weight: bold;
+}
+
+.voices {
+  background: var(--paper);
+  padding: 78px 7vw 90px;
+}
+
+.voices-heading,
+.voice-list {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.voices-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  justify-content: space-between;
+}
+
+.voices-heading .eyebrow {
+  color: var(--orange);
+  margin: 0;
+}
+
+.voices h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin: 0;
+}
+
+.voices-heading > p:last-child {
+  line-height: 1.5;
+  margin: 0;
+  max-width: 360px;
+}
+
+.voice-list {
+  display: flex;
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.voice-card {
+  background: #e5f6fa;
+  border-top: 6px solid var(--yellow);
+  flex: 1;
+  padding: 28px;
+}
+
+.voice-card:nth-child(2) {
+  border-top-color: var(--blue);
+}
+
+.voice-card:nth-child(3) {
+  border-top-color: #4fcb53;
+}
+
+.quote-mark {
+  color: var(--orange);
+  display: block;
+  font-size: 4rem;
+  font-weight: bold;
+  height: 42px;
+  line-height: 1;
+}
+
+.voice-card blockquote {
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 14px 0 28px;
+}
+
+.voice-card > p {
+  font-size: .8rem;
+  font-weight: bold;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.sr-only {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+@media (max-width: 800px) {
   .hero {
-    padding: 32px 8px;
-    font-size: 1em;
+    padding: 26px 5vw 48px;
   }
 
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
+  .hero-content {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 45px;
+    padding-top: 56px;
   }
 
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
+  .message {
+    max-width: 650px;
   }
 
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
+  .message h1 {
+    font-size: clamp(3rem, 12vw, 5rem);
   }
 
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
+  .impact-stats {
+    gap: 18px;
   }
 
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
+  .donation-card {
+    align-self: center;
+  }
+
+  .voices-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .voice-list {
+    flex-direction: column;
   }
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
+@media (max-width: 480px) {
+  .brand img {
+    width: 180px;
+  }
+
+  .donation-card {
+    border-radius: 18px;
+    padding: 28px 20px;
+  }
+
+  .donation-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .impact-stats {
+    gap: 12px;
+  }
+
+  .stat strong {
+    font-size: 1.45rem;
+  }
+
+  .stat span {
+    font-size: .7rem;
+  }
+
+  .amount-options {
+    flex-wrap: wrap;
+  }
+
+  .amount-button {
+    flex-basis: 40%;
   }
 
   .impact-image {

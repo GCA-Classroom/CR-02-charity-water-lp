@@ -3,45 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <meta name="description" content="Help charity: water bring clean water to communities around the world.">
+    <title>Fix the flow | charity: water</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+        <header class="site-header">
+            <a href="#top" class="brand" aria-label="charity: water home">
+                <img src="img/cw_logo.png" alt="charity: water">
+            </a>
+        </header>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+        <div class="hero-content" id="top">
+            <div class="message">
+                <p class="eyebrow">The water crisis is solvable</p>
+                <h1>Fix the flow.<br><span>Change the globe.</span></h1>
+                <p class="intro">One drop from you can ripple into clean water that transforms entire communities.</p>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+                <div class="reasons">
+                    <div class="reason">
+                        <span class="reason-icon">&#9678;</span>
+                        <p><strong>100% funds clean water projects.</strong><br><small>Private donors cover our operating costs.</small></p>
+                    </div>
+                    <div class="reason">
+                        <span class="reason-icon">&#9829;</span>
+                        <p><strong>See the difference your gift makes.</strong><br><small>Real projects. Real people. Real change.</small></p>
+                    </div>
+                </div>
+
+                <div class="impact-stats" aria-label="charity: water impact statistics">
+                    <p class="stats-label">Our impact</p>
+                    <div class="stat">
+                        <strong>771M</strong>
+                        <span>people lack basic access to clean water</span>
+                    </div>
+                    <div class="stat">
+                        <strong>100%</strong>
+                        <span>of public donations fund water projects</span>
+                    </div>
+                    <div class="stat">
+                        <strong>29</strong>
+                        <span>countries reached by charity: water</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="donation-card" id="donation-form">
+                <h2>Make a donation</h2>
+                <p class="form-intro">Choose an amount to get started.</p>
+                <fieldset>
+                    <legend>Donation amount</legend>
+                    <div class="amount-options">
+                        <button type="button" class="amount-button" data-amount="$25">$25</button>
+                        <button type="button" class="amount-button selected" data-amount="$50">$50</button>
+                        <button type="button" class="amount-button" data-amount="$100">$100</button>
+                        <button type="button" class="amount-button" data-amount="Custom">Custom</button>
+                    </div>
+                </fieldset>
+
+                <fieldset class="details">
+                    <legend>Your details</legend>
+                    <label>
+                        <span class="sr-only">Full name</span>
+                        <input type="text" name="name" placeholder="Full name" required>
+                    </label>
+                    <label>
+                        <span class="sr-only">Email address</span>
+                        <input type="email" name="email" placeholder="Email address" required>
+                    </label>
+                    <label>
+                        <span class="sr-only">Add a note (optional)</span>
+                        <textarea name="note" placeholder="Add a note (optional)" rows="2"></textarea>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="donate-button">Donate <span id="chosen-amount">$50</span> now</button>
+                <p class="thank-you" id="thank-you" aria-live="polite">Thank you for helping make clean water possible.</p>
+                <p class="generosity"><span>&#128167;</span> Your generosity matters.</p>
+            </form>
         </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+    <section class="voices" aria-labelledby="voices-heading">
+        <div class="voices-heading">
+            <p class="eyebrow">The ripple effect</p>
+            <h2 id="voices-heading">What clean water makes possible</h2>
+            <p>These reflections are adapted from public charity: water project stories. Clean water changes more than a morning routine; it opens time, health, and opportunity.</p>
+        </div>
+        <div class="voice-list">
+            <article class="voice-card">
+                <span class="quote-mark">&ldquo;</span>
+                <blockquote>With water close to home, girls can spend their days learning instead of walking for water.</blockquote>
+                <p>Student and family stories from charity: water projects</p>
+            </article>
+            <article class="voice-card">
+                <span class="quote-mark">&ldquo;</span>
+                <blockquote>A reliable water source gives families a healthier start and more time to build their future.</blockquote>
+                <p>Community stories from charity: water projects</p>
+            </article>
+            <article class="voice-card">
+                <span class="quote-mark">&ldquo;</span>
+                <blockquote>When a community has clean water, the whole community has room to grow.</blockquote>
+                <p>Local partner stories from charity: water projects</p>
+            </article>
+        </div>
     </section>
+
+    <script>
+        const amountButtons = document.querySelectorAll('.amount-button');
+        const chosenAmount = document.querySelector('#chosen-amount');
+        const donationForm = document.querySelector('#donation-form');
+        const thankYou = document.querySelector('#thank-you');
+
+        amountButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                amountButtons.forEach(function (item) {
+                    item.classList.remove('selected');
+                });
+                button.classList.add('selected');
+                chosenAmount.textContent = button.dataset.amount;
+            });
+        });
+
+        donationForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            thankYou.textContent = 'Thank you! Your first step toward clean water is ready.';
+            donationForm.classList.add('submitted');
+        });
+    </script>
 </body>
 </html>
